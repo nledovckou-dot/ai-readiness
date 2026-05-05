@@ -254,24 +254,24 @@ function Stepper({ current }: { current: StepId }) {
 
 function IntroStep({ onStart }: { onStart: () => void }) {
   return (
-    <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+    <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-14">
       <div>
         <Caption>Метод · Один процесс · Семь минут</Caption>
-        <h1 className="font-display text-[clamp(40px,7vw,84px)] font-black leading-[0.95] tracking-tight text-ink">
+        <h1 className="mt-5 font-display text-[clamp(32px,4.4vw,52px)] font-black leading-[1.05] tracking-tight text-ink">
           Прежде чем покупать ИИ —{" "}
-          <span className="italic text-flame">проверьте,</span> готов ли отдел его принять.
+          <span className="italic text-flame">проверьте</span> отдел.
         </h1>
-        <p className="mt-7 max-w-xl text-lg leading-relaxed text-inkSoft">
+        <p className="mt-6 max-w-xl text-base leading-relaxed text-inkSoft sm:text-lg">
           Большинство пилотов умирают не из-за модели. Из-за того, что данные разбросаны, регламенты не работают, а менеджеры саботируют новый инструмент.
         </p>
-        <p className="mt-4 max-w-xl text-lg leading-relaxed text-inkSoft">
+        <p className="mt-4 max-w-xl text-base leading-relaxed text-inkSoft sm:text-lg">
           Здесь вы оцените один процесс по трём осям: насколько он болит, насколько готова техника, насколько готова команда. На выходе — балл от 1 до 5 и понимание, что делать.
         </p>
-        <div className="mt-10 flex flex-wrap items-center gap-4">
+        <div className="mt-8 flex flex-wrap items-center gap-4">
           <Button variant="flame" size="lg" onClick={onStart}>
             Начать оценку <ArrowRight className="h-4 w-4" />
           </Button>
-          <span className="font-mono text-xs uppercase tracking-widest text-muted">
+          <span className="font-mono text-[11px] uppercase tracking-widest text-muted">
             5 отделов · 29 процессов · ~7 минут
           </span>
         </div>
