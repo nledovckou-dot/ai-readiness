@@ -1,0 +1,62 @@
+/* Bunny Fonts — privacy-friendly drop-in replacement for Google Fonts */
+@import url("https://fonts.bunny.net/css?family=inter:400,500,600,700|jetbrains-mono:400,500|unbounded:600,700,800,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Unbounded", "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: #F4ECE0;
+  color: #1A1614;
+  font-family: var(--font-inter);
+  font-feature-settings: "ss01", "ss02", "cv11";
+}
+
+::selection {
+  background: #FF5A1F;
+  color: #F4ECE0;
+}
+
+/* Subtle paper texture */
+.paper {
+  background-image:
+    radial-gradient(rgba(26, 22, 20, 0.03) 1px, transparent 1px),
+    radial-gradient(rgba(26, 22, 20, 0.02) 1px, transparent 1px);
+  background-size: 38px 38px, 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* Bordered grid like the playbook */
+.rule-bottom {
+  border-bottom: 1px solid rgba(26, 22, 20, 0.12);
+}
+
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-count {
+  animation: count-up 600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Print styles for "save / print result" */
+@media print {
+  body { background: white !important; }
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+}
+
+.print-only { display: none; }
